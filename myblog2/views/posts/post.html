@@ -1,0 +1,11 @@
+{% extends '../layout.html' %}
+
+{% block title %}{% endblock %}
+
+{% block content %}
+
+	<h1>{{ title }}</h1>
+	<p>{{ date|date('F jS, Y') }}</p>
+	<p>{{ body }}</p>
+
+{% endblock %}

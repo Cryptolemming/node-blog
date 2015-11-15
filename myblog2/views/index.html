@@ -1,0 +1,15 @@
+{% extends 'layout.html' %}
+
+{% block title %}{% endblock %}
+
+{% block content %}
+
+	<ul>
+		{% for post in posts %}
+			<li><a href='/posts/{{post.title}}'><h2>{{ post.title }}</h2></a></li>
+			<li>{{ post.date|date('F jS, Y') }}</li>
+			<li>{{ post.body }}</li>
+		{% endfor %}
+	</ul>
+
+{% endblock %}

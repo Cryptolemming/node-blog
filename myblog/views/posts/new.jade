@@ -1,0 +1,14 @@
+extends ../layout
+
+block content
+	h1.
+		#{title}
+	form#formAddPost(name='addpost', method='post', action='/posts')
+		p Title:
+			input#inputTitle(type='text', placeholder='ex. This is a great title', name='title')
+		p Date:
+			input#inputDate(type='date', name='date')
+		p Body:
+			input#inputBody(type='text', placeholder='ex. This is great body text', name='body')
+		p
+			button#btnSubmit(type='submit') submit

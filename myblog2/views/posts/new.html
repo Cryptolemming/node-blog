@@ -1,0 +1,17 @@
+{% extends '../layout.html' %}
+
+{% block title %}{% endblock %}
+
+{% block content %}
+
+	<h1>{{ title }}</h1>
+
+	<form method='post' action='/posts/new' class='form-posts'>
+		<label>Title:</label>
+		<input type="text" name='title' class='form-posts-text' required>
+		<label>Body:</label>
+		<input type="text" name='body' class='form-posts-body' required>
+		<button type='submit' class='btn-submit'>Submit</button>
+	</form>
+
+{% endblock %}

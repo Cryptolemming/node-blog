@@ -1,0 +1,17 @@
+{% extends '../layout.html' %}
+
+{% block title %}{% endblock %}
+
+{% block content %}
+
+	<h1>{{ title }}</h1>
+
+	<form method='post' action='/posts/signup' class='form-login'>
+		<label>Username:</label>
+		<input type='text' name='username' class='form-login-username' required autofocus>
+		<label>Password:</label>
+		<input type="text" name='password' class='form-login-password' required>
+		<button type='submit' class='btn-login'>Signup</button>
+	</form>
+
+{% endblock %}

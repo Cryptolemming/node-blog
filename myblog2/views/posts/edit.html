@@ -1,0 +1,21 @@
+{% extends '../layout.html' %}
+
+{% block title %}{% endblock %}
+
+{% block content %}
+
+	<h1>{{ title }}</h1>
+
+	<form method='post' action='/posts/edit/{{title}}?_method=PUT' class='form-posts'>
+		<label>Title:</label>
+		<input type="text" name='title' class='form-posts-text' value='{{ title }}'>
+		<label>Body</label>
+		<input type="text" name='body' class='form-posts-body' value='{{ body }}' required>
+		<button type='submit' class='btn-form'>Submit</button>
+	</form>
+	<br>
+	<form method='post' action='/posts/edit/{{title}}?_method=DELETE' class='form-posts'>
+		<button type='submit' class='btn-form'>Delete</button>
+	</form>
+
+{% endblock %}
